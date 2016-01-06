@@ -1,18 +1,21 @@
 Package.describe({
-	name: 'ian:accounts-ui-bootstrap-3',
+	name: 'vladoro:accounts-ui-react-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.2.84',
-	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3"
+	version: '1.0.0',
+	git: "https://github.com/vladoro/meteor-accounts-ui-react-bootstrap-3.git"
 })
 
 Package.on_use(function (api) {
-	api.use(['session@1.0.0',
+	api.versionsFrom('1.2.1');
+	
+	api.use(['session@1.1.1',
 		'spacebars@1.0.0',
-		'stylus@1.0.0 || 2.0.0',
-		'accounts-base@1.0.0',
-		'underscore@1.0.0',
-		'templating@1.0.0',
-		'anti:i18n@0.4.3'
+		'stylus@2.511.0',
+		'accounts-base@1.2.2',
+		'underscore@1.0.4',
+		'templating@1.1.5',
+		'anti:i18n@0.4.3',
+		'react@0.14.3'
 		],'client')
 
 	api.imply('accounts-base', ['client', 'server']);
@@ -25,7 +28,7 @@ Package.on_use(function (api) {
 	api.use('accounts-oauth@1.0.0', {weak: true});
 	// Allows us to directly test if accounts-password (which doesn't use
 	// Accounts.oauth.registerService) exists.
-	api.use('accounts-password@1.0.0', {weak: true});
+	api.use('accounts-password@1.1.4', {weak: true});
 
 	api.add_files([
 		'accounts_ui.js',
@@ -72,5 +75,5 @@ Package.on_use(function (api) {
 		'accounts_ui.styl'
 		], 'client')
 
-	api.export('accountsUIBootstrap3', 'client')
+	api.export('accountsUIReactBootstrap3', 'client')
 })

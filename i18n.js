@@ -1,6 +1,6 @@
 i18n.setDefaultLanguage('en')
 
-accountsUIBootstrap3 = {
+accountsUIReactBootstrap3 = {
 	setLanguage: function (lang) {
 		return i18n.setLanguage(lang)
 	},

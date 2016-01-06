@@ -165,11 +165,11 @@ Accounts.ui.config({
 ![Custom signup form example](http://i.imgur.com/pvd5L1U.png)
 
 Alternatively, if you prefer to pass values directly to the `onCreateUser` function, without creating new fields in the signup form,
-you can use the `accountsUIBootstrap3.setCustomSignupOptions` function. If it exists, the returned value is handled as the initial options object,
+you can use the `accountsUIReactBootstrap3.setCustomSignupOptions` function. If it exists, the returned value is handled as the initial options object,
 which is later available in `onCreateUser` on the server. For example:
 
 ```javascript
-accountsUIBootstrap3.setCustomSignupOptions = function() {
+accountsUIReactBootstrap3.setCustomSignupOptions = function() {
     return {
     	referrerId: Session.get('referrerId') // Or whatever
     }
@@ -178,10 +178,10 @@ accountsUIBootstrap3.setCustomSignupOptions = function() {
 
 ### Logout callback
 
-If the function `accountsUIBootstrap3.logoutCallback` exists, it will be called as the callback of Meteor.logout. For example:
+If the function `accountsUIReactBootstrap3.logoutCallback` exists, it will be called as the callback of Meteor.logout. For example:
 
 ```javascript
-accountsUIBootstrap3.logoutCallback = function(error) {
+accountsUIReactBootstrap3.logoutCallback = function(error) {
   if(error) console.log("Error:" + error);
   Router.go('home');
 }
@@ -206,31 +206,31 @@ Note: If you allow your users to login using both username or email, that field 
 The default language is English, but this package also comes with translations to many other languages built in. If you want to change the language run one of the following on the client:
 
 ```javascript
-accountsUIBootstrap3.setLanguage('es'); // for Spanish
-accountsUIBootstrap3.setLanguage('ca'); // for Catalan
-accountsUIBootstrap3.setLanguage('fr'); // for French
-accountsUIBootstrap3.setLanguage('de'); // for German
-accountsUIBootstrap3.setLanguage('it'); // for Italian
-accountsUIBootstrap3.setLanguage('pt-PT'); // for Portuguese (Portugal)
-accountsUIBootstrap3.setLanguage('pt-BR'); // for Portuguese (Brazil)
-accountsUIBootstrap3.setLanguage('ru'); // for Russian
-accountsUIBootstrap3.setLanguage('el'); // for Greek
-accountsUIBootstrap3.setLanguage('ko'); // for Korean
-accountsUIBootstrap3.setLanguage('ar'); // for Arabic
-accountsUIBootstrap3.setLanguage('pl'); // for Polish
-accountsUIBootstrap3.setLanguage('zh-CN'); // for Chinese (China)
-accountsUIBootstrap3.setLanguage('zh-TW'); // for Chinese (Taiwan)
-accountsUIBootstrap3.setLanguage('nl'); // for Dutch
-accountsUIBootstrap3.setLanguage('ja'); // for Japanese
-accountsUIBootstrap3.setLanguage('he'); // for Hebrew
-accountsUIBootstrap3.setLanguage('sv'); // for Swedish
-accountsUIBootstrap3.setLanguage('ua'); // for Ukrainian
+accountsUIReactBootstrap3.setLanguage('es'); // for Spanish
+accountsUIReactBootstrap3.setLanguage('ca'); // for Catalan
+accountsUIReactBootstrap3.setLanguage('fr'); // for French
+accountsUIReactBootstrap3.setLanguage('de'); // for German
+accountsUIReactBootstrap3.setLanguage('it'); // for Italian
+accountsUIReactBootstrap3.setLanguage('pt-PT'); // for Portuguese (Portugal)
+accountsUIReactBootstrap3.setLanguage('pt-BR'); // for Portuguese (Brazil)
+accountsUIReactBootstrap3.setLanguage('ru'); // for Russian
+accountsUIReactBootstrap3.setLanguage('el'); // for Greek
+accountsUIReactBootstrap3.setLanguage('ko'); // for Korean
+accountsUIReactBootstrap3.setLanguage('ar'); // for Arabic
+accountsUIReactBootstrap3.setLanguage('pl'); // for Polish
+accountsUIReactBootstrap3.setLanguage('zh-CN'); // for Chinese (China)
+accountsUIReactBootstrap3.setLanguage('zh-TW'); // for Chinese (Taiwan)
+accountsUIReactBootstrap3.setLanguage('nl'); // for Dutch
+accountsUIReactBootstrap3.setLanguage('ja'); // for Japanese
+accountsUIReactBootstrap3.setLanguage('he'); // for Hebrew
+accountsUIReactBootstrap3.setLanguage('sv'); // for Swedish
+accountsUIReactBootstrap3.setLanguage('ua'); // for Ukrainian
 ```
 
 If you want to implement your own language, use the `map` function like so:
 
 ```javascript
-accountsUIBootstrap3.map('es', {
+accountsUIReactBootstrap3.map('es', {
     _resetPasswordDialog: {
       title: 'Restablece tu contraseña',
       cancel: 'Cancelar',

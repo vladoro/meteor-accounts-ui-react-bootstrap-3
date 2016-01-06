@@ -528,8 +528,8 @@
 
 		// to be passed to Accounts.createUser
 		var options = {};
-		if(typeof accountsUIBootstrap3.setCustomSignupOptions === 'function') {
-			options = accountsUIBootstrap3.setCustomSignupOptions();
+		if(typeof accountsUIReactBootstrap3.setCustomSignupOptions === 'function') {
+			options = accountsUIReactBootstrap3.setCustomSignupOptions();
 			if (!(options instanceof Object)){ options = {}; }
 		}
 

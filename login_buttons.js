@@ -15,8 +15,8 @@
 		'click #login-buttons-logout': function() {
 			Meteor.logout(function(error) {
 				loginButtonsSession.closeDropdown();
-				if (typeof accountsUIBootstrap3.logoutCallback === 'function') {
-					accountsUIBootstrap3.logoutCallback(error);
+				if (typeof accountsUIReactBootstrap3.logoutCallback === 'function') {
+					accountsUIReactBootstrap3.logoutCallback(error);
 				}
 			});
 		}
